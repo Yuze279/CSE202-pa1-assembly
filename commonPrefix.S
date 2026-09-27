@@ -4,16 +4,16 @@
 
 
 commonPrefix:
-  xorl %eax %reax # n=0  
+  xorl %eax %eax # n=0  
 
 .While: 
-  movzbl (%rdi, %rax) %ecx # ecx = a[n]
+  movzbl (%rdi, %rax), %ecx # ecx = a[n]
   testb %cl, %cl           # is a[n] == '\0' test if END OF STRING 
-  je  .done                # STOP 
+  je  .Done                # STOP 
   cmpb (%rsi, %rax), %cl   #compare a[n] with b[n]
   jne .Done                # if !== 
   incl %eax                # n++ 
-  jmp .Done               # CHECK NEXT CHARACTER
+  jmp .While               # CHECK NEXT CHARACTER
 
 .Done: 
   retq
