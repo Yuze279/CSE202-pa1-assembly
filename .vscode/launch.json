@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/alicepeng/CSE202/CSE202-pa1-assembly",
+      "program": "/Users/alicepeng/CSE202/CSE202-pa1-assembly/build/Debug/outDebug"
+    }
+  ]
+}

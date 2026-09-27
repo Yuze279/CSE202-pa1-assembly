@@ -1,6 +1,9 @@
 .global commonPrefix
 # a in %rdi, b in %rsi; result (prefix length) in %eax
 commonPrefix:
+  movq %rax %rax 
+
+
   retq
 
 
