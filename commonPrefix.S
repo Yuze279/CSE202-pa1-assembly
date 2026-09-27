@@ -4,7 +4,7 @@
 
 
 commonPrefix:
-  xorl %eax %eax # n=0  
+  xorl %eax, %eax # n=0  
 
 .While: 
   movzbl (%rdi, %rax), %ecx # ecx = a[n]
