@@ -1,6 +1,7 @@
 .global sum
 # pointer to list head in %rdi; result in %rax
 # --> LIST IS IN %rdi & RESULT IS IN %rax
+
 # struct ll { char *name; long value; struct ll *next; }
 #   offset 0  : name
 #   offset 8  : value

@@ -7,7 +7,7 @@ gcd:
     retq
 
 .Recurse: 
-    movl %edi, %rax #rax = a 
+    movslq %edi, %rax #rax = a 
     cqto      #sign-extend into rdx:rax 
     movslq %esi, %rcx #rcx = b 
     idivq  %rcx  # rax = a / b, rdx = a % b
@@ -17,8 +17,6 @@ gcd:
     call   gcd        # eax = gcd(b, a % b)
     addq   $8, %rsp   # undo alignment
     retq      # result eax
-
-
 
 
 
